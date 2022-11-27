@@ -1,0 +1,1 @@
+cmd_/home/qpf/yyh/workspace/meltdown_Lab/Kernel/YYHKernel.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/qpf/yyh/workspace/meltdown_Lab/Kernel/YYHKernel.ko /home/qpf/yyh/workspace/meltdown_Lab/Kernel/YYHKernel.o /home/qpf/yyh/workspace/meltdown_Lab/Kernel/YYHKernel.mod.o ;  true
