@@ -3,7 +3,7 @@
 这里包括
 + meltdown 原文：`Meltdown Reading Kernel Memory from User Space`
 + 个人学习笔记：`MeltdownNote`
-+ meltdown_Lab 指导书（form [SeedLab](https://seedsecuritylabs.org/Labs_16.04/System/Meltdown_Attack/)）：`Meltdown_Attack`   , `Meltdown_Spectre_ex_problem`
++ meltdown_Lab 指导书（from [SeedLab](https://seedsecuritylabs.org/Labs_16.04/System/Meltdown_Attack/)）：`Meltdown_Attack`   , `Meltdown_Spectre_ex_problem`
 
 ## meltdown_Lab
 + 一个基于 [SeedLab](https://seedsecuritylabs.org/Labs_16.04/System/Meltdown_Attack/) 完成的 Meltdown DEMO
